@@ -1,22 +1,10 @@
-import type { Metadata } from 'next';
-import { Poppins, Urbanist } from 'next/font/google';
-import './globals.css';
-
-const poppins = Poppins({ 
-  subsets: ['latin'], 
-  weight: ['400', '500', '600'],
-  variable: '--font-poppins',
-});
-
-const urbanist = Urbanist({ 
-  subsets: ['latin'], 
-  weight: ['700', '800'],
-  variable: '--font-urbanist',
-});
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Kelompok 1',
-  description: 'Praktikum Rekayasa Sistem Informasi',
+  title: "Kelompok 1 — Praktikum RSI",
+  description:
+    "Penugasan Git dan Version Control · Praktikum Rekayasa Sistem Informasi",
 };
 
 export default function RootLayout({
@@ -25,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${urbanist.variable}`}>
-      <body className="font-poppins">{children}</body>
+    <html lang="id">
+      <body>{children}</body>
     </html>
   );
 }
