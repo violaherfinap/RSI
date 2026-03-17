@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800;900&family=Poppins:wght@400;500&display=swap');
 
 :root {
-  --green-deep:   #2b4a3a;  
-  --green-base:   #4f7a5e;  
-  --green-light:  #7fa88a;  
-  --green-pale:   #c4dec8;  
-  --pink-vivid:   #f27a9a;  
-  --pink-mid:     #ffb0be;  
-  --pink-pale:    #ffdbe3;  
-  --cream:        #fff8f0;  
-  --ink-muted:    #5a6b5a;  
+  --green-deep:   #1f3d2f;  
+  --green-base:   #2f6f4f;  
+  --green-light:  #6fae8a;  
+  --green-pale:   #e3f1ea;  
+
+  --pink-vivid:   #e54873;  
+  --pink-mid:     #f29ab0;  
+  --pink-pale:    #fde7ee;  
+
+  --cream:        #fdfaf6;  
+  --ink-muted:    #3f4f45;
 
   --font-display: 'Urbanist', sans-serif;
   --font-body:    'Poppins', sans-serif;
