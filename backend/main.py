@@ -1,25 +1,25 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-# Inisialisasi aplikasi
 app = FastAPI()
 
-# Membuat kerangka data untuk item yang akan dikirim (POST)
-class Item(BaseModel):
-    id: int
+# Kerangka data khusus untuk Mahasiswa
+class Mahasiswa(BaseModel):
+    id: str
     nama: str
-    deskripsi: str | None = None
+    jurusan: str
+    fakultas: str
 
-# Database buatan untuk menyimpan data sementara
-db_items = []
+# Database bodong
+db_mahasiswa = []
 
-# 1. Endpoint GET (Untuk mengambil/melihat data)
-@app.get("/items")
-def get_items():
-    return {"pesan": "Ini adalah daftar item milik Princess Vio", "data": db_items}
+# Endpoint GET (Untuk melihat data mahasiswa)
+@app.get("/mahasiswa")
+def get_mahasiswa():
+    return {"pesan": "Ini adalah daftar mahasiswa", "data": db_mahasiswa}
 
-# 2. Endpoint POST (Untuk menambah data baru)
-@app.post("/items")
-def create_item(item: Item):
-    db_items.append(item.model_dump())
-    return {"pesan": "Item baru berhasil ditambahkan!", "data": item}
+# Endpoint POST (Untuk menambah data mahasiswa baru)
+@app.post("/mahasiswa")
+def create_mahasiswa(mhs: Mahasiswa):
+    db_mahasiswa.append(mhs.model_dump())
+    return {"pesan": "Data mahasiswa baru berhasil ditambahkan!", "data": mhs}
