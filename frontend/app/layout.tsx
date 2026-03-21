@@ -14,7 +14,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body
+        style={{
+          margin: 0,
+          fontFamily: "sans-serif",
+          background: "#f3f4f6",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
