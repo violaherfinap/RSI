@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -23,14 +23,6 @@ db_mahasiswa = []
 @app.get("/mahasiswa")
 def get_mahasiswa():
     return {"pesan": "Ini adalah daftar mahasiswa", "data": db_mahasiswa}
-
-@app.get("/mahasiswa/{id}")
-def get_mahasiswa_by_id(id: str):
-    for data in db_mahasiswa:
-        if data["id"] == id:
-            return {"status": "success", "data": data}
-    raise HTTPException(status_code=404, detail="Mahasiswa tidak ditemukan")
-
 
 @app.post("/mahasiswa")
 def create_mahasiswa(mhs: Mahasiswa):
