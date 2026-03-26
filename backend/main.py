@@ -44,3 +44,5 @@ def delete_mahasiswa(id: str):
             hapus = db_mahasiswa.pop(i)
             return {"pesan": f"Data mahasiswa dengan ID {id} berhasil dihapus!", "data": hapus}
     return {"pesan": f"Mahasiswa dengan ID {id} tidak ditemukan"}
+
+## KELOMPOK 1 ##
