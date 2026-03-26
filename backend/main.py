@@ -20,6 +20,10 @@ class Mahasiswa(BaseModel):
 
 db_mahasiswa = []
 
+@app.get("/")
+def root():
+    return {"pesan": "Selamat datang di API Data Mahasiswa Kelompok 1!"}
+
 @app.get("/mahasiswa")
 def get_mahasiswa():
     return {"pesan": "Ini adalah daftar mahasiswa", "data": db_mahasiswa}
