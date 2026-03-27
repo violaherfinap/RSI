@@ -20,6 +20,10 @@ class Mahasiswa(BaseModel):
 
 db_mahasiswa = []
 
+@app.get("/")
+def root():
+    return {"pesan": "Selamat datang di API Data Mahasiswa Kelompok 1!"}
+
 @app.get("/mahasiswa")
 def get_mahasiswa():
     return {"pesan": "Ini adalah daftar mahasiswa", "data": db_mahasiswa}
@@ -52,3 +56,5 @@ def delete_mahasiswa(id: str):
             hapus = db_mahasiswa.pop(i)
             return {"pesan": f"Data mahasiswa dengan ID {id} berhasil dihapus!", "data": hapus}
     return {"pesan": f"Mahasiswa dengan ID {id} tidak ditemukan"}
+
+## KELOMPOK 1 ##
